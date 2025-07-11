@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alpin Payment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay">
+    <div class="container">
+      <img src="https://files.catbox.moe/t2j9qz.jpg" class="logo" alt="Logo" />
+      <h1 class="headline">Hi, I'm Alpin-Developer</h1>
+      <p class="subtext">Silakan pilih metode pembayaran di bawah ini</p>
+
+      <div class="buttons">
+        <button onclick="showInfo('DANA', '081234567890 MUHAMMAD ALFIN CANDRA WIYONO')">DANA</button>
+        <button onclick="showInfo('SHOPEPAY', '081991819101 a/n MUHAMMAD ALFIN CANDRA WIYONO')">SHOPEPAY</button>
+        <button onclick="showInfo('BRI', 'KOSONG a/n MUHAMMAD ALFIN CANDRA WIYONO')">BRI</button>
+        <button onclick="showQRIS()">QRIS</button>
+      </div>
+
+      <!-- Popup info -->
+      <div class="popup-container" id="popup">
+        <div class="popup-box transparent">
+          <p id="infoText"></p>
+          <div class="popup-buttons">
+            <button onclick="copyText()">Salin</button>
+            <button onclick="closePopup()">Tutup</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Popup QRIS -->
+      <div class="popup-container" id="qrisPopup">
+        <div class="popup-box transparent">
+          <img src="https://files.catbox.moe/0elabm.jpg" alt="QRIS" class="qris-img"/>
+          <div class="popup-buttons">
+            <button onclick="closePopup()">Tutup</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="note">Setelah melakukan pembayaran, mohon kirim bukti transfer melalui WhatsApp agar proses dipercepat.</p>
+      <footer>© AlpinDeveloper</footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
